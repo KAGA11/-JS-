@@ -51,9 +51,6 @@ const binary = decimalToBinary(decNumber)
 console.log(binary);
 
 // 实现
-/**
- * @param {number} decNumber
- */
 function decimalToBinary(decNumber){
     const remStack = new Stack()
     let number = decNumber;
@@ -70,6 +67,33 @@ function decimalToBinary(decNumber){
     }
     return binary
 }
+
+
+// 括号匹配
+const s = "()"
+const isValid = s => {
+    const validBracket = {
+        '(' : ')',
+        '[' : ']',
+        '{' : '}',
+    }
+    const stack = []
+    
+    for (let i of s) {
+        if (validBracket[i]) {
+            stack.push(i)
+        }else{
+            // i === 右括号
+            let left = stack.pop()
+            if (i !== validBracket[left]) {
+                return false
+            }
+        }
+    }
+    return stack.length === 0
+};
+
+console.log(isValid(s));
 
 
 
