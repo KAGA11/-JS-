@@ -38,7 +38,7 @@ console.log(queue.isEmpty());
 
 console.log('-'.repeat(30));
 // 队列的实际应用
-// 1 击鼓传花 LCR 187 leetcode 破冰游戏
+// 1 击鼓传花 参考: LCR 187 leetcode 破冰游戏 注:这道题是约瑟夫环 用queue会超时, 代码写对即可
 /* 共有 names 位成员参与击鼓传花。他们围城一个圆圈,把花尽快传给旁白的人,某一时刻传花停止,这个时候花在谁手上谁就被淘汰.
    重复这个过程, 直到只剩一个成员(winner)
 */ 
